@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@dark.css">
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Estudiantes"><content><fx:include source="EstudiantesView.fxml"/></content></Tab>
+                <Tab text="Cursos"><content><fx:include source="CursosView.fxml"/></content></Tab>
+                <Tab text="Profesores"><content><fx:include source="ProfesoresView.fxml"/></content></Tab>
+                <Tab text="Inscripciones"><content><fx:include source="InscripcionesView.fxml"/></content></Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

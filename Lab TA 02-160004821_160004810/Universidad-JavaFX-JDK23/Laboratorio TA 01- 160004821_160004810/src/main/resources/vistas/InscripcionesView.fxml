@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="edu.universidad.ui.InscripcionController">
+    <children>
+        <VBox spacing="12" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+            <children>
+                <GridPane hgap="12" vgap="12">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" minWidth="100" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints halignment="RIGHT" minWidth="120"/>
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints valignment="CENTER"/>
+                        <RowConstraints valignment="CENTER"/>
+                        <RowConstraints valignment="CENTER"/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="Curso ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtCursoId" promptText="Ej. 101" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Código Est.:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                        <TextField fx:id="txtCodigoEst" promptText="Ej. 10" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                        <Label text="Año:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtAnio" promptText="Ej. 2025" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Semestre:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                        <TextField fx:id="txtSemestre" editable="false" promptText="1-12" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                        <Label text="Estado curso:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                        <Label fx:id="lblCursoActivo" text="-" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+                    </children>
+                </GridPane>
+
+                <HBox spacing="12">
+                    <children>
+                        <Button text="Inscribir" onAction="#onInscribir"/>
+                        <Button text="Actualizar" onAction="#onActualizar"/>
+                        <Button text="Desinscribir" onAction="#onDesinscribir"/>
+                        <Button text="Limpiar" onAction="#onLimpiar"/>
+                    </children>
+                </HBox>
+
+                <TableView fx:id="tabla" prefHeight="300">
+                    <columns>
+                        <TableColumn fx:id="colCurso" text="Curso ID" prefWidth="140"/>
+                        <TableColumn fx:id="colCodigo" text="Código Est." prefWidth="160"/>
+                        <TableColumn fx:id="colAnio" text="Año" prefWidth="120"/>
+                        <TableColumn fx:id="colSemestre" text="Semestre" prefWidth="140"/>
+                    </columns>
+                </TableView>
+
+                <Label fx:id="lblEstado" text="Listo" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

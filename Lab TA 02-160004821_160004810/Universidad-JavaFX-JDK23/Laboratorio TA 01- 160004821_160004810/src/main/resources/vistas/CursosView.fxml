@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.universidad.ui.CursoController" spacing="10">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120" halignment="RIGHT"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints minWidth="120" halignment="RIGHT"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <children>
+            <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtId" promptText="Ej. 101" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <TextField fx:id="txtNombre" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+            <Label text="Semestre:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtSemestre" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Activo:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+            <CheckBox fx:id="chkActivo" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+            <Label text="Profesor ID:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtProfesorId" promptText="Opcional" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </children>
+    </GridPane>
+
+    <HBox spacing="8">
+        <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        <children>
+            <Button text="Crear/Actualizar" onAction="#onCrearActualizar"/>
+            <Button text="Eliminar" onAction="#onEliminar"/>
+            <Button text="Limpiar" onAction="#onLimpiar"/>
+            <Button text="Recargar" onAction="#onRecargar"/>
+        </children>
+    </HBox>
+
+    <TableView fx:id="tabla">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="90"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+            <TableColumn fx:id="colSemestre" text="Semestre" prefWidth="120"/>
+            <TableColumn fx:id="colActivo" text="Activo" prefWidth="90"/>
+            <TableColumn fx:id="colProfesor" text="Profesor ID" prefWidth="120"/>
+            <TableColumn fx:id="colInscritos" text="Inscritos" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER_LEFT">
+        <padding><Insets top="6" right="6" bottom="6" left="6"/></padding>
+        <children><Label fx:id="lblEstado" text="Listo."/></children>
+    </HBox>
+</VBox>

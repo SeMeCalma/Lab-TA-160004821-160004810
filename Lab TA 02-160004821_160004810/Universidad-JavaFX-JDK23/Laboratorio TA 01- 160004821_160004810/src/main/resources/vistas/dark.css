@@ -1,0 +1,70 @@
+/* Tema oscuro minimalista para la app */
+.root { /* aplica a toda la escena */
+    -fx-base: #1e1f22; /* color base oscuro */
+    -fx-background: #1e1f22; /* fondo */
+    -fx-text-fill: #e6e6e6; /* color de texto */
+}
+
+.label { /* estilo de etiquetas */
+    -fx-text-fill: #e6e6e6; /* texto claro */
+}
+
+.text-field { /* cajas de texto */
+    -fx-background-color: #2b2d31; /* fondo más claro */
+    -fx-text-fill: #e6e6e6; /* texto */
+    -fx-prompt-text-fill: #8a8f98; /* placeholder */
+    -fx-background-radius: 8; /* bordes redondeados */
+    -fx-padding: 6 10 6 10; /* padding */
+}
+
+.button { /* botones */
+    -fx-background-color: #3a3f45; /* fondo botón */
+    -fx-text-fill: #e6e6e6; /* texto botón */
+    -fx-background-radius: 10; /* redondeo */
+    -fx-padding: 6 14 6 14; /* padding */
+}
+
+.button:hover { /* hover botón */
+    -fx-background-color: #4a5057; /* color hover */
+}
+
+.table-view { /* tabla */
+    -fx-background-color: #1e1f22; /* fondo tabla */
+    -fx-table-cell-border-color: #2b2d31; /* bordes celdas */
+    -fx-background-insets: 0; /* sin bordes extra */
+}
+
+.table-row-cell { /* filas */
+    -fx-background-color: #1e1f22; /* fondo fila */
+}
+
+.table-row-cell:odd { /* filas impares */
+    -fx-background-color: #222428; /* zebra */
+}
+
+.table-row-cell:selected { /* fila seleccionada */
+    -fx-background-color: #3b82f6; /* azul selección */
+    -fx-text-fill: white; /* texto selección */
+}
+
+/* --- Mejoras de contraste para TableView --- */
+.table-view, .table-view:focused {             /* tabla en general */
+    -fx-background-color: #1e1f22;             /* fondo oscuro */
+    -fx-text-background-color: #e6e6e6;        /* color de texto por defecto */
+}
+
+.table-row-cell .text, .table-cell {           /* texto dentro de celdas */
+    -fx-fill: #e6e6e6;                         /* color de texto claro */
+    -fx-text-fill: #e6e6e6;                    /* redundante para controles internos */
+}
+
+.table-view .column-header, .table-view .column-header .label {
+    -fx-background-color: #2b2d31;            /* fondo encabezado */
+    -fx-text-fill: #e6e6e6;                    /* texto encabezado */
+}
+
+.table-cell:selected, .table-row-cell:selected .table-cell {
+    -fx-background-color: #3b82f6;            /* selección */
+    -fx-text-fill: white;                      /* texto selección */
+}
+
