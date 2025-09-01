@@ -1,7 +1,7 @@
 # Laboratorio-TA-02
 160004821-160004810
 - `UI JavaFX para Universidad (JDK 23)`
-- 'Ruta del MainApp.java src/main/java/edu/universidad/ui/MainApp.java'
+- `Ruta del MainApp.java src/main/java/edu/universidad/ui/MainApp.java`
 ## Requisitos
 
 - JDK **23** instalado.
